@@ -1,0 +1,13 @@
+[Unit]
+Description=webcam with S3 upload
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/home/pi/webcam/webcam.sh
+Restart=always
+User=pi
+Group=pi
+
+[Install]
+WantedBy=multi-user.target
